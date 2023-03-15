@@ -60,6 +60,9 @@ export default {
 
                 gap: 25px;
 
+                text-align: center;
+                line-height: 30px;
+
                 h6,
                 h4,
                 p {

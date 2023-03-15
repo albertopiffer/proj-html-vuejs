@@ -39,6 +39,10 @@ export default {
         align-items: center;
 
         gap: 40px;
+
+        p {
+            line-height: 30px;
+        }
     }
 }
 </style>
