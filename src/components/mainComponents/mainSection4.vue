@@ -53,12 +53,15 @@ export default {
 .s4 {
     height: 1100px;
 
+    background-color: white;
+
     text-align: center;
 
     padding: 0 30px;
 
     .container {
         height: 100%;
+
         display: flex;
         flex-direction: column;
         justify-content: center;

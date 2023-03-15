@@ -26,6 +26,7 @@ export default {
     background-size: cover;
 
     padding: 0 30px;
+    margin-bottom: 15px;
 
     .container {
         width: 750px;

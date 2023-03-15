@@ -23,7 +23,6 @@ export default {
 
 header {
     height: 47px;
-    background-color: $lima;
 
     font-size: 13px;
     color: white;
