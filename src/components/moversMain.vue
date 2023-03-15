@@ -1,13 +1,20 @@
-<template lang="">
-    <div>
-        
-    </div>
-</template>
 <script>
-export default {
 
+import mainNavbar from './mainComponents/mainNavbar.vue'
+import mainSection1 from './mainComponents/mainSection1.vue'
+
+
+export default {
+    components: {
+        mainNavbar,
+        mainSection1,
+    }
 }
 </script>
-<style lang="">
-    
-</style>
+
+<template>
+    <mainNavbar />
+    <mainSection1 />
+</template>
+
+<style lang="scss" scoped></style>

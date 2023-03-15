@@ -17,6 +17,7 @@ export default {
 <template>
   <div>
     <moversHeader />
+    <moversMain />
   </div>
 </template>
 

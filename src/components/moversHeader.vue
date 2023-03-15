@@ -11,13 +11,15 @@
         </div>
     </header>
 </template>
+
 <script>
 export default {
 
 }
 </script>
+
 <style lang="scss" scoped>
-@use '../style/partials/colors' as *;
+@use '../style/partials/palette' as *;
 
 header {
     height: 47px;
@@ -37,7 +39,6 @@ header {
 
         ul {
             display: flex;
-            justify-content: flex-end;
 
             gap: 20px;
 
