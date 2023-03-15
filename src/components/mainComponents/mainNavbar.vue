@@ -1,6 +1,7 @@
 <template>
     <nav>
         <div class="container">
+            <img src="../../img/avada-movers-logo.png" alt="">
             <ul>
                 <li v-for="(el, i) in navbarElements" :key="i"
                     :class="{ button: el.button == 'true', active: el.active == 'true' }">
@@ -64,13 +65,15 @@ export default {
 
 nav {
     height: 105px;
+    width: 100%;
 
     .container {
         height: 100%;
+        width: 100%;
 
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
 
         ul {
             display: flex;
