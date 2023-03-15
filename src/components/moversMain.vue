@@ -33,13 +33,14 @@ export default {
 
 <style lang="scss" scoped>
 .containerS1 {
-    background-color: burlywood;
+    background-image: url(../img/avada-movers-homeherobackground-final.jpg);
+    background-position: center bottom;
+    background-size: cover;
     height: 690px;
 
     padding: 0 30px;
 
     .container {
-        background-color: beige;
         height: 100%;
 
         position: relative;
