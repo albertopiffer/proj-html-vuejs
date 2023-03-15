@@ -1,6 +1,6 @@
 <template>
     <li>
-        <img :src="cardS4Elements.image" alt="">
+        <img :src="cardS4Elements.image" alt="imgS4">
         <div class="cardText">
             <h5>{{ cardS4Elements.title }}</h5>
             <p>{{ cardS4Elements.description }}</p>

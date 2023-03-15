@@ -6,7 +6,7 @@
                     <h5>about</h5>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis ex ut sem accumsan vehicula.
                         Integer elit arcu, hendrerit id sapien ut, facilisis accumsan arcu.</p>
-                    <img src="../../img/avada-movers-logo.png" alt="">
+                    <img src="../../img/avada-movers-logo.png" alt="logo-avada">
                 </div>
                 <div class="col">
                     <h5>avada movers</h5>

@@ -1,7 +1,7 @@
 <template>
     <nav>
         <div class="container">
-            <img src="../../img/avada-movers-logo.png" alt="">
+            <img src="../../img/avada-movers-logo.png" alt="logo-avada">
             <ul>
                 <li v-for="(el, i) in navbarElements" :key="i"
                     :class="{ button: el.button == 'true', active: el.active == 'true' }">
