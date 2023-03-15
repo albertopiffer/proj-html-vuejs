@@ -24,7 +24,9 @@ export default {
             <mainSection1 />
         </div>
     </div>
-    <mainSection2 />
+    <a href="#">
+        <mainSection2 />
+    </a>
     <mainSection3 />
     <mainSection4 />
 </template>
