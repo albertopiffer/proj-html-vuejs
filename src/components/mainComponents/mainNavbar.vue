@@ -3,10 +3,12 @@
         <div class="container">
             <img src="../../img/avada-movers-logo.png" alt="logo-avada">
             <ul>
-                <li v-for="(el, i) in navbarElements" :key="i"
+                <a href="#" v-for="(el, i) in navbarElements" :key="i"
                     :class="{ button: el.button == 'true', active: el.active == 'true' }">
-                    <a href="#"> {{ el.name }}</a>
-                </li>
+                    <li>
+                        {{ el.name }}
+                    </li>
+                </a>
             </ul>
         </div>
     </nav>
@@ -86,10 +88,16 @@ nav {
             .active {
                 color: $lima;
             }
+
+            a {
+                transition: color 0.3s ease-in-out;
+            }
+
+            a:not(.button):hover {
+                color: $lima;
+            }
+
         }
-
-
     }
-
 }
 </style>

@@ -18,7 +18,7 @@
                         <li><a href="#">Free Quote</a></li>
                     </ul>
                 </div>
-                <div class="col">
+                <div class="col list">
                     <h5>recent posts</h5>
                     <ul>
                         <li><a href="#">Heading Out To College?</a></li>
@@ -93,8 +93,27 @@ export default {
                     color: $smallTitle;
 
                     gap: 40px;
+
+                    li {
+                        transition: color 0.3s ease-in-out;
+                    }
+
+                    li:hover {
+                        color: $lima;
+                    }
+                }
+            }
+
+            .list {
+                li {
+                    padding-left: 1em;
+                    text-indent: -1em;
                 }
 
+                li::before {
+                    content: ">";
+                    padding-right: 5px;
+                }
             }
         }
     }

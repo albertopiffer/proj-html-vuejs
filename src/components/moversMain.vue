@@ -26,7 +26,7 @@ export default {
 <template>
     <div class="containerS1">
         <div class="container">
-            <mainNavbar class="top-right" />
+            <mainNavbar class="topFixed" />
             <mainSection1 />
         </div>
     </div>
@@ -59,7 +59,7 @@ export default {
         align-items: center;
         justify-content: center;
 
-        .top-right {
+        .topFixed {
             position: absolute;
 
             top: 0;

@@ -26,5 +26,11 @@ export default {
     color: white;
     font-size: 18px;
     text-transform: uppercase;
+
+    transition: background-color 0.3s ease-in-out;
+}
+
+.s2:hover {
+    background-color: lighten($denim, 20%);
 }
 </style>

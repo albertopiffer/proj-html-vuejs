@@ -1,6 +1,8 @@
 <template>
     <li>
-        <img :src="cardS4Elements.image" alt="imgS4">
+        <div class="imgContainer"> <!-- necessario per evitare che overflow occupi il padding -->
+            <img :src="cardS4Elements.image" alt="imgS4">
+        </div>
         <div class="cardText">
             <h5>{{ cardS4Elements.title }}</h5>
             <p>{{ cardS4Elements.description }}</p>
@@ -27,8 +29,17 @@ li {
     padding: 20px;
     background-color: $sectionBg;
 
-    img {
-        margin-bottom: 20px;
+    .imgContainer {
+        overflow: hidden;
+
+        img {
+            margin-bottom: 20px;
+            transition: transform 1s ease;
+        }
+
+        img:hover {
+            transform: scale(1.15);
+        }
     }
 
     .cardText {
