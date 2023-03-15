@@ -5,6 +5,7 @@ import mainSection1 from './mainComponents/mainSection1.vue'
 import mainSection2 from './mainComponents/mainSection2.vue'
 import mainSection3 from './mainComponents/mainSection3.vue'
 import mainSection4 from './mainComponents/mainSection4.vue'
+import mainSection5 from './mainComponents/mainSection5.vue'
 
 export default {
     components: {
@@ -13,6 +14,7 @@ export default {
         mainSection2,
         mainSection3,
         mainSection4,
+        mainSection5,
     }
 }
 </script>
@@ -29,14 +31,16 @@ export default {
     </a>
     <mainSection3 />
     <mainSection4 />
+    <mainSection5 />
 </template>
 
 <style lang="scss" scoped>
 .containerS1 {
+    height: 690px;
+
     background-image: url(../img/avada-movers-homeherobackground-final.jpg);
     background-position: center bottom;
     background-size: cover;
-    height: 690px;
 
     padding: 0 30px;
 
