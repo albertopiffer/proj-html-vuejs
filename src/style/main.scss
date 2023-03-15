@@ -2,8 +2,10 @@
 
 @use './partials/palette' as *;
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
 * {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
 
 .container {
@@ -15,9 +17,23 @@
     background-color: $denim;
     color: white;
     font-size: 14px;
+    font-weight: 700;
 
     text-transform: uppercase;
 
     padding: 13px 29px;
     border-radius: 999px;
+}
+
+h6 {
+    color: $smallTitle;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+h4 {
+    color: $lima;
+    font-size: 48px;
+    font-weight: 700;
+    text-transform: capitalize;
 }
