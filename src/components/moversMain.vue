@@ -4,6 +4,7 @@ import mainNavbar from './mainComponents/mainNavbar.vue'
 import mainSection1 from './mainComponents/mainSection1.vue'
 import mainSection2 from './mainComponents/mainSection2.vue'
 import mainSection3 from './mainComponents/mainSection3.vue'
+import mainSection4 from './mainComponents/mainSection4.vue'
 
 export default {
     components: {
@@ -11,6 +12,7 @@ export default {
         mainSection1,
         mainSection2,
         mainSection3,
+        mainSection4,
     }
 }
 </script>
@@ -24,6 +26,7 @@ export default {
     </div>
     <mainSection2 />
     <mainSection3 />
+    <mainSection4 />
 </template>
 
 <style lang="scss" scoped>

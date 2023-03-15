@@ -19,10 +19,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@use '../../style/partials/palette' as *;
+
 .s3 {
     text-align: center;
 
     height: 670px;
+    background-color: $section3Bg;
 
     .container {
         width: 750px !important;
