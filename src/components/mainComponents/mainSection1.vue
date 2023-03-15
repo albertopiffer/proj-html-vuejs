@@ -1,10 +1,8 @@
 <template>
     <section class="s1">
-        <div class="container">
-            <h6>moving without the hassle</h6>
-            <h4>we make it simple</h4>
-            <h6>professional service with quality and costumer satisfaction</h6>
-        </div>
+        <h6>moving without the hassle</h6>
+        <h4>we make it simple</h4>
+        <h6>professional service with quality and costumer satisfaction</h6>
     </section>
 </template>
 
@@ -18,27 +16,26 @@ export default {
 @use '../../style/partials/palette' as *;
 
 .s1 {
-    .container {
-        height: 100%;
+    text-align: center;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
-        gap: 35px;
+    gap: 35px;
 
-        h6 {
-            color: $smallTitle;
-            font-size: 16px;
-            text-transform: uppercase;
-        }
-
-        h4 {
-            color: $title;
-            font-size: 64px;
-            text-transform: uppercase;
-        }
-
+    h6 {
+        color: $smallTitle;
+        font-size: 16px;
+        text-transform: uppercase;
     }
+
+    h4 {
+        color: $title;
+        font-size: 64px;
+        text-transform: uppercase;
+    }
+
+
 }
 </style>

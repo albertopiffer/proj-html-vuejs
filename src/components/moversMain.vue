@@ -2,12 +2,15 @@
 
 import mainNavbar from './mainComponents/mainNavbar.vue'
 import mainSection1 from './mainComponents/mainSection1.vue'
-
+import mainSection2 from './mainComponents/mainSection2.vue'
+import mainSection3 from './mainComponents/mainSection3.vue'
 
 export default {
     components: {
         mainNavbar,
         mainSection1,
+        mainSection2,
+        mainSection3,
     }
 }
 </script>
@@ -16,36 +19,35 @@ export default {
     <div class="containerS1">
         <div class="container">
             <mainNavbar class="top-right" />
-            <mainSection1 class="center" />
+            <mainSection1 />
         </div>
     </div>
+    <mainSection2 />
+    <mainSection3 />
 </template>
 
 <style lang="scss" scoped>
 .containerS1 {
     background-color: burlywood;
+    height: 690px;
 
     padding: 0 30px;
 
     .container {
-        height: 690px;
         background-color: beige;
+        height: 100%;
 
         position: relative;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
 
         .top-right {
             position: absolute;
 
             top: 0;
             right: 0;
-        }
-
-        .center {
-            position: absolute;
-
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
         }
     }
 }
