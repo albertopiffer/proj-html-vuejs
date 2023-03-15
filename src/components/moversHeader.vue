@@ -3,10 +3,18 @@
         <div class="container">
             <p>Call us for a Free Quote: 1.800.555.6789</p>
             <ul>
-                <li><font-awesome-icon icon="fa-brands fa-facebook-f" /></li>
-                <li><font-awesome-icon icon="fa-brands fa-twitter" /></li>
-                <li><font-awesome-icon icon="fa-brands fa-instagram" /></li>
-                <li><font-awesome-icon icon="fa-brands fa-youtube" /></li>
+                <li>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-facebook-f" /></a>
+                </li>
+                <li>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-twitter" /></a>
+                </li>
+                <li>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-instagram" /></a>
+                </li>
+                <li>
+                    <a href="#"><font-awesome-icon icon="fa-brands fa-youtube" /></a>
+                </li>
             </ul>
         </div>
     </header>
