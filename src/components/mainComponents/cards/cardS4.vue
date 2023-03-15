@@ -40,7 +40,9 @@ li {
 
         gap: 25px;
 
-        line-height: 30px;
+        p {
+            line-height: 30px;
+        }
 
         padding: 30px 20px;
     }

@@ -1,13 +1,16 @@
-<template lang="">
-    <div>
-        
-    </div>
-</template>
 <script>
-export default {
 
+import footerMain from './footerComponents/footerMain.vue'
+
+export default {
+    components: {
+        footerMain,
+    }
 }
 </script>
-<style lang="">
-    
-</style>
+
+<template>
+    <footerMain />
+</template>
+
+<style lang="scss" scoped></style>

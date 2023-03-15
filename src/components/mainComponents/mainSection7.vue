@@ -33,7 +33,10 @@ export default {
 
         text-align: center;
         color: $smallTitle;
-        line-height: 30px;
+
+        p {
+            line-height: 30px;
+        }
 
         display: flex;
         flex-direction: column;
