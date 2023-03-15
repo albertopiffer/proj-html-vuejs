@@ -25,7 +25,9 @@ export default {
     text-align: center;
 
     height: 670px;
-    background-color: $section3Bg;
+    background-color: $sectionBg;
+
+    padding: 0 30px;
 
     .container {
         width: 750px !important;
@@ -34,6 +36,7 @@ export default {
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
 
         gap: 40px;
     }
