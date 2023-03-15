@@ -35,7 +35,7 @@ export default {
 
         h4 {
             color: $title;
-            font-size: 53px;
+            font-size: 64px;
             text-transform: uppercase;
         }
 
