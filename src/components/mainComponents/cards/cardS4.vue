@@ -38,7 +38,11 @@ li {
         flex-direction: column;
         align-items: center;
 
+        gap: 25px;
+
         line-height: 30px;
+
+        padding: 30px 20px;
     }
 }
 </style>

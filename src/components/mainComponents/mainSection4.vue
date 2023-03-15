@@ -73,7 +73,8 @@ export default {
         .cards {
             display: flex;
             justify-content: center;
-            gap: 100px;
+
+            gap: 50px;
         }
     }
 }
