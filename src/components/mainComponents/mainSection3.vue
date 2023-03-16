@@ -1,6 +1,6 @@
 <template>
     <section class="s3">
-        <div class="container">
+        <div class="container" ref="myDiv">
             <h6>headache free</h6>
             <h4>award winning<br>moving company</h4>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac augue. Orci varius natoque penatibus et
@@ -15,10 +15,21 @@
 <script>
 export default {
     mounted() {
-        setTimeout(() => {
-            const myElement = document.querySelector('.s3 > .container');
-            myElement.classList.add('fade-in');
-        }, 200);
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        observer.observe(this.$refs.myDiv);
     }
 }
 </script>

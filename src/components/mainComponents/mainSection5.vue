@@ -1,7 +1,7 @@
 <template>
     <section class="s5">
         <div class="container">
-            <div class="card">
+            <div class="card" ref="myDiv">
                 <div class="cardText">
                     <h6>we remove the headache from moving</h6>
                     <h4>Move With Ease</h4>
@@ -20,10 +20,21 @@
 <script>
 export default {
     mounted() {
-        setTimeout(() => {
-            const myElement = document.querySelector('.container > .card');
-            myElement.classList.add('fade-in');
-        }, 200);
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        observer.observe(this.$refs.myDiv);
     }
 }
 </script>
@@ -89,8 +100,10 @@ export default {
                 }
             }
 
-            transform: translateX(calc(100% + 625px));
-            transition: transform 0.5s ease-out;
+            opacity: 0;
+            transform: translateX(calc(100% + 300px));
+            transition: opacity 0.4s ease-out,
+            transform 0.4s ease-out;
         }
     }
 }

@@ -1,5 +1,5 @@
 <template>
-    <section class="s1">
+    <section class="s1" ref="myDiv">
         <h6>moving without the hassle</h6>
         <h3>we make it simple</h3>
         <h6>professional service with quality and costumer satisfaction</h6>
@@ -9,10 +9,21 @@
 <script>
 export default {
     mounted() {
-        setTimeout(() => {
-            const myElement = document.querySelector('.s1');
-            myElement.classList.add('fade-in');
-        }, 200);
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        observer.observe(this.$refs.myDiv);
     }
 }
 </script>
