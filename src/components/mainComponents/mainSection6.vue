@@ -33,16 +33,30 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
-            const elementLeft = document.querySelector('.s6 .left');
-            const elementCenter = document.querySelector('.s6 .center');
-            const elementRight = document.querySelector('.s6 .right');
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
 
-            elementLeft.classList.add('fade-in');
-            elementCenter.classList.add('fade-in');
-            elementRight.classList.add('fade-in');
-        }, 200);
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+
+                    const s6right = document.querySelector('.s6 .right');
+                    const s6center = document.querySelector('.s6 .center');
+                    s6right.classList.add('fade-in');
+                    s6center.classList.add('fade-in');
+
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        const elementToObserve = this.$el.querySelector('.left');
+        observer.observe(elementToObserve);
     }
+
 }
 
 </script>
@@ -93,18 +107,24 @@ export default {
             margin: 40px 0 85px;
 
             .left {
-                transform: translateX(calc(-100% - ((100vw - 1300px) / 2) - 400px)); //400px è la width dell'elemento
-                transition: transform 0.5s ease-out;
+                opacity: 0;
+                transform: translateX(-100%);
+                transition: opacity 0.4s ease-out,
+                    transform 0.5s ease-out;
             }
 
             .center {
-                transform: translateY(calc(-100% - 380px)); //380px è la height dell'elemento
-                transition: transform 0.5s ease-out;
+                opacity: 0;
+                transform: translateY(-100%);
+                transition: opacity 0.4s ease-out,
+                    transform 0.5s ease-out;
             }
 
             .right {
-                transform: translateX(calc(100% + ((100vw - 1300px) / 2) + 400px));
-                transition: transform 0.5s ease-out;
+                opacity: 0;
+                transform: translateX(100%);
+                transition: opacity 0.4s ease-out,
+                    transform 0.5s ease-out;
             }
         }
     }

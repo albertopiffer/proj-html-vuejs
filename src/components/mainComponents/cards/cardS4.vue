@@ -1,6 +1,6 @@
 <template>
-    <li
-        :class="{ left: cardS4Elements.position == 'left', center: cardS4Elements.position == 'center', right: cardS4Elements.position == 'right' }">
+    <li :class="{ left: cardS4Elements.position == 'left', center: cardS4Elements.position == 'center', right: cardS4Elements.position == 'right' }"
+        class="observedS4">
         <div class="imgContainer"> <!-- necessario per evitare che overflow occupi il padding -->
             <img :src="cardS4Elements.image" alt="imgS4">
         </div>

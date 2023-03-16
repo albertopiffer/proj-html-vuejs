@@ -101,7 +101,7 @@ export default {
             }
 
             opacity: 0;
-            transform: translateX(calc(100% + 300px));
+            transform: translateX(100%);
             transition: opacity 0.4s ease-out,
             transform 0.4s ease-out;
         }

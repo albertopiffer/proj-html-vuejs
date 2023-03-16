@@ -36,15 +36,23 @@ export default {
     },
 
     mounted() {
-        setTimeout(() => {
-            const elementLeft = document.querySelector('.s4 .left');
-            const elementCenter = document.querySelector('.s4 .center');
-            const elementRight = document.querySelector('.s4 .right');
+        const options = {
+            rootMargin: '0px',
+            threshold: 0.5
+        };
 
-            elementLeft.classList.add('fade-in');
-            elementCenter.classList.add('fade-in');
-            elementRight.classList.add('fade-in');
-        }, 200);
+        const elementsToObserve = document.querySelectorAll('.observedS4');
+
+        elementsToObserve.forEach(element => {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    element.classList.add('fade-in');
+                    observer.unobserve(element);
+                }
+            }, options);
+
+            observer.observe(element);
+        });
     }
 }
 
