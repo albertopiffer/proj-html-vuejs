@@ -20,6 +20,10 @@ import {
     faPaperPlane,
 } from '@fortawesome/free-regular-svg-icons'
 
+import {
+    faBars,
+} from '@fortawesome/free-solid-svg-icons'
+
 /* add icons to the library */
 library.add(
     faFacebookF,
@@ -27,6 +31,7 @@ library.add(
     faInstagram,
     faYoutube,
     faPaperPlane,
+    faBars,
 )
 
 createApp(App)

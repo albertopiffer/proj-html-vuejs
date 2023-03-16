@@ -88,6 +88,11 @@ export default {
 
     overflow: hidden;
 
+    @media (max-width: 1024px) {
+        height: auto;
+        padding: 80px 0;
+    }
+
     .container {
         height: 100%;
 
@@ -125,6 +130,11 @@ export default {
                 transform: translateX(100%);
                 transition: opacity 0.4s ease-out,
                     transform 0.5s ease-out;
+            }
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+                align-items: center;
             }
         }
     }

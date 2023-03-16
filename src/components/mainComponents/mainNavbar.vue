@@ -2,7 +2,7 @@
     <nav>
         <div class="container">
             <img src="../../img/avada-movers-logo.png" alt="logo-avada">
-            <ul>
+            <ul class="navbarLarge">
                 <a href="#" v-for="(el, i) in navbarElements" :key="i"
                     :class="{ button: el.button == 'true', active: el.active == 'true' }">
                     <li>
@@ -10,6 +10,11 @@
                     </li>
                 </a>
             </ul>
+
+            <a href="#" class="navbarSmall">
+                <font-awesome-icon icon="fa-solid fa-bars" />
+            </a>
+
         </div>
     </nav>
 </template>
@@ -97,6 +102,19 @@ nav {
                 color: $lima;
             }
 
+            @media (max-width: 1024px) {
+                display: none;
+            }
+
+        }
+
+        .navbarSmall {
+            display: none;
+            font-size: 25px;
+
+            @media (max-width: 1024px) {
+                display: block;
+            }
         }
     }
 }

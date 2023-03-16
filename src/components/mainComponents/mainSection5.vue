@@ -66,6 +66,10 @@ export default {
 
             padding: 15px;
 
+            @media (max-width: 1024px) {
+                width: 100%;
+            }
+
             .cardText {
                 background-color: $lima;
 

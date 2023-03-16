@@ -82,6 +82,11 @@ export default {
 
     padding: 0 30px;
 
+    @media (max-width: 1024px) {
+        height: auto;
+        padding: 80px 0;
+    }
+
     .container {
         height: 100%;
 
@@ -122,7 +127,12 @@ export default {
                 transition: opacity 0.5s ease-out,
                     transform 0.5s ease-out;
             }
+
+            @media (max-width: 1024px) {
+                flex-direction: column;
+            }
         }
     }
+
 }
 </style>
