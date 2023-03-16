@@ -1,5 +1,6 @@
 <template>
-    <li>
+    <li
+        :class="{ left: cardS4Elements.position == 'left', center: cardS4Elements.position == 'center', right: cardS4Elements.position == 'right' }">
         <div class="imgContainer"> <!-- necessario per evitare che overflow occupi il padding -->
             <img :src="cardS4Elements.image" alt="imgS4">
         </div>

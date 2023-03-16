@@ -42,7 +42,7 @@ export default {
 
 <style lang="scss" scoped>
 .containerS1 {
-    height: 690px;
+    height: 800px;
 
     background-image: url(../img/avada-movers-homeherobackground-final.jpg);
     background-position: center bottom;

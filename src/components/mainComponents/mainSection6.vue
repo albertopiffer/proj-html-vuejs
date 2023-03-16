@@ -10,16 +10,19 @@ export default {
                     "image": "./src/img/avada-movers-johndoe-final-200x200.jpg",
                     "title": "John Doe",
                     "description": "”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus dolor, aliquet sed maximus et, vestibulum pulvinar leo. Vivamus varius pretium fermentum.”",
+                    "position": "left"
                 },
                 {
                     "image": "./src/img/avada-movers-janedoe-final-200x200.jpg",
                     "title": "Jane Doe",
                     "description": "”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus dolor, aliquet sed maximus et, vestibulum pulvinar leo. Vivamus varius pretium fermentum.”",
+                    "position": "center"
                 },
                 {
                     "image": "./src/img/avada-movers-johnsmith-final-200x200.jpg",
                     "title": "John Smith",
                     "description": "”Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent lectus dolor, aliquet sed maximus et, vestibulum pulvinar leo. Vivamus varius pretium fermentum.”",
+                    "position": "right"
                 },
             ]
         }
@@ -27,6 +30,18 @@ export default {
 
     components: {
         cardS6,
+    },
+
+    mounted() {
+        setTimeout(() => {
+            const elementLeft = document.querySelector('.s6 .left');
+            const elementCenter = document.querySelector('.s6 .center');
+            const elementRight = document.querySelector('.s6 .right');
+
+            elementLeft.classList.add('fade-in');
+            elementCenter.classList.add('fade-in');
+            elementRight.classList.add('fade-in');
+        }, 200);
     }
 }
 
@@ -57,6 +72,8 @@ export default {
 
     padding: 0 30px;
 
+    overflow: hidden;
+
     .container {
         height: 100%;
 
@@ -74,6 +91,21 @@ export default {
             gap: 50px;
 
             margin: 40px 0 85px;
+
+            .left {
+                transform: translateX(calc(-100% - ((100vw - 1300px) / 2) - 400px)); //400px è la width dell'elemento
+                transition: transform 0.5s ease-out;
+            }
+
+            .center {
+                transform: translateY(calc(-100% - 380px)); //380px è la height dell'elemento
+                transition: transform 0.5s ease-out;
+            }
+
+            .right {
+                transform: translateX(calc(100% + ((100vw - 1300px) / 2) + 400px));
+                transition: transform 0.5s ease-out;
+            }
         }
     }
 }

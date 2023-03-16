@@ -14,7 +14,12 @@
 
 <script>
 export default {
-
+    mounted() {
+        setTimeout(() => {
+            const myElement = document.querySelector('.s3 > .container');
+            myElement.classList.add('fade-in');
+        }, 200);
+    }
 }
 </script>
 
@@ -43,6 +48,12 @@ export default {
         p {
             line-height: 30px;
         }
+
+        opacity: 0;
+        transform: translateX(-30px);
+        transition: opacity 0.5s ease-out,
+        transform 0.5s ease-out;
+
     }
 }
 </style>

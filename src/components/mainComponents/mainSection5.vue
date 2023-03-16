@@ -19,7 +19,12 @@
 
 <script>
 export default {
-
+    mounted() {
+        setTimeout(() => {
+            const myElement = document.querySelector('.container > .card');
+            myElement.classList.add('fade-in');
+        }, 200);
+    }
 }
 </script>
 
@@ -34,6 +39,8 @@ export default {
     background-size: cover;
 
     padding: 0 30px;
+
+    overflow: hidden;
 
     .container {
         height: 100%;
@@ -81,6 +88,9 @@ export default {
                     margin: 25px 0;
                 }
             }
+
+            transform: translateX(calc(100% + 625px));
+            transition: transform 0.5s ease-out;
         }
     }
 }

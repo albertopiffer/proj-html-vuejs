@@ -10,19 +10,22 @@ export default {
                     "image": "./src/img/avada-movers-serviceonephoto-final-600x383.jpg",
                     "title": "Two Man Teams",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac consectetur augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "buttonText": "read more"
+                    "buttonText": "read more",
+                    "position": "left"
                 },
                 {
                     "image": "./src/img/avada-movers-servicetwophoto-final-600x383.jpg",
                     "title": "We Do All The Lifting",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac consectetur augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "buttonText": "read more"
+                    "buttonText": "read more",
+                    "position": "center"
                 },
                 {
                     "image": "./src/img/avada-movers-servicethreephoto-final-600x383.jpg",
                     "title": "Coast To Coast",
                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac consectetur augue. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-                    "buttonText": "read more"
+                    "buttonText": "read more",
+                    "position": "right"
                 },
             ]
         }
@@ -30,6 +33,18 @@ export default {
 
     components: {
         cardS4,
+    },
+
+    mounted() {
+        setTimeout(() => {
+            const elementLeft = document.querySelector('.s4 .left');
+            const elementCenter = document.querySelector('.s4 .center');
+            const elementRight = document.querySelector('.s4 .right');
+
+            elementLeft.classList.add('fade-in');
+            elementCenter.classList.add('fade-in');
+            elementRight.classList.add('fade-in');
+        }, 200);
     }
 }
 
@@ -78,6 +93,27 @@ export default {
             justify-content: center;
 
             gap: 50px;
+
+            .left {
+                opacity: 0;
+                transform: translateX(-30px);
+                transition: opacity 0.5s ease-out,
+                    transform 0.5s ease-out;
+            }
+
+            .center {
+                opacity: 0;
+                transform: translateY(-30px);
+                transition: opacity 0.5s ease-out,
+                    transform 0.5s ease-out;
+            }
+
+            .right {
+                opacity: 0;
+                transform: translateX(+30px);
+                transition: opacity 0.5s ease-out,
+                    transform 0.5s ease-out;
+            }
         }
     }
 }

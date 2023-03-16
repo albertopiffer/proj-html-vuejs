@@ -1,5 +1,6 @@
 <template>
-    <li>
+    <li
+        :class="{ left: cardS6Elements.position == 'left', center: cardS6Elements.position == 'center', right: cardS6Elements.position == 'right' }">
         <img :src="cardS6Elements.image" alt="imgS6">
         <h5>{{ cardS6Elements.title }}</h5>
         <p>{{ cardS6Elements.description }}</p>

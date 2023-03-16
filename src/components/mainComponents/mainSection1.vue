@@ -8,7 +8,12 @@
 
 <script>
 export default {
-
+    mounted() {
+        setTimeout(() => {
+            const myElement = document.querySelector('.s1');
+            myElement.classList.add('fade-in');
+        }, 200);
+    }
 }
 </script>
 
@@ -29,6 +34,11 @@ export default {
         font-size: 64px;
         text-transform: uppercase;
     }
+
+    opacity: 0;
+    transform: translateY(-30px);
+    transition: opacity 0.5s ease-out,
+    transform 0.5s ease-out;
 
 }
 </style>
