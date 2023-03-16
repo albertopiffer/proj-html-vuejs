@@ -90,7 +90,7 @@ export default {
 
     @media (max-width: 1024px) {
         height: auto;
-        padding: 80px 0;
+        padding: 80px 30px;
     }
 
     .container {
